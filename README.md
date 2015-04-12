@@ -1,7 +1,9 @@
 am335x_bandgap
 ==============
 
-~~~DISCLAIMER: Procede at your own risk.  This process requires modifying dtb files required for booting your Beaglebone Black and identifying it's hardware.  I only assert that it has worked for me and take no responsibility for anything that may or may not happen if you follow or don't follow these steps.~~~
+
+**DISCLAIMER: Procede at your own risk.  This process requires modifying dtb files required for booting your Beaglebone Black and identifying it's hardware.  I only assert that it has worked for me and take no responsibility for anything that may or may not happen if you follow or don't follow these steps.**
+
 
 This is the am335x_bandgap temperature sensor as a dkms module tested under Linux kernel 3.19.3-1-ARCH for the Beaglebone Black.  As best I can determine, this is no longer part of newer kernels because TI has indicated that the sensor is unreliable -- as the case may be, I personally would rather something than nothing.
 
