@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Tweaked a bit, but based on the following:
+
 # CPU TEMP MONITOR
 # CTRL-C TO STOP
 # WRITTEN BY BRIAN HECKATHORNE - ME@GODFEAR.ORG 
