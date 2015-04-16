@@ -1,0 +1,67 @@
+--- am335x-boneblack.dts	2015-04-16 01:01:17.571044724 -0500
++++ am335x-boneblack-asm.dts	2015-04-16 00:58:08.876739483 -0500
+@@ -991,7 +991,7 @@
+ 			clock-frequency = <0x2dc6c00>;
+ 			reg = <0x48022000 0x2000>;
+ 			interrupts = <0x49>;
+-			status = "disabled";
++			status = "okay";
+ 			dmas = <0x26 0x1c 0x26 0x1d>;
+ 			dma-names = "tx", "rx";
+ 		};
+@@ -1002,7 +1002,7 @@
+ 			clock-frequency = <0x2dc6c00>;
+ 			reg = <0x48024000 0x2000>;
+ 			interrupts = <0x4a>;
+-			status = "disabled";
++			status = "okay";
+ 			dmas = <0x26 0x1e 0x26 0x1f>;
+ 			dma-names = "tx", "rx";
+ 		};
+@@ -1022,7 +1022,7 @@
+ 			clock-frequency = <0x2dc6c00>;
+ 			reg = <0x481a8000 0x2000>;
+ 			interrupts = <0x2d>;
+-			status = "disabled";
++			status = "okay";
+ 		};
+ 
+ 		serial@481aa000 {
+@@ -1031,7 +1031,7 @@
+ 			clock-frequency = <0x2dc6c00>;
+ 			reg = <0x481aa000 0x2000>;
+ 			interrupts = <0x2e>;
+-			status = "disabled";
++			status = "okay";
+ 		};
+ 
+ 		i2c@44e0b000 {
+@@ -1601,7 +1601,7 @@
+ 			interrupt-parent = <0x1>;
+ 			interrupts = <0x10>;
+ 			ti,hwmods = "adc_tsc";
+-			status = "disabled";
++			status = "ok";
+ 
+ 			tsc {
+ 				compatible = "ti,am3359-tsc";
+@@ -1610,6 +1610,7 @@
+ 			adc {
+ 				#io-channel-cells = <0x1>;
+ 				compatible = "ti,am3359-adc";
++				ti,adc-channels = <0x0 0x1 0x2 0x3 0x4 0x5 0x6 0x7>;
+ 			};
+ 		};
+ 
+@@ -1670,6 +1671,11 @@
+ 			dma-names = "tx", "rx";
+ 		};
+ 
++		bandgap@44e10448 {
++			compatible = "ti,am335x-bandgap";
++			reg = <0x44e10448 0x8>;
++		};
++
+ 		rng@48310000 {
+ 			compatible = "ti,omap4-rng";
+ 			ti,hwmods = "rng";

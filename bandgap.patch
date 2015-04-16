@@ -1,0 +1,14 @@
+--- am335x-boneblack.dts	2015-04-16 01:01:17.571044724 -0500
++++ am335x-boneblack-asm.dts	2015-04-16 00:58:08.876739483 -0500
+@@ -1670,6 +1670,11 @@
+ 			dma-names = "tx", "rx";
+ 		};
+
++		bandgap@44e10448 {
++			compatible = "ti,am335x-bandgap";
++			reg = <0x44e10448 0x8>;
++		};
++
+ 		rng@48310000 {
+ 			compatible = "ti,omap4-rng";
+ 			ti,hwmods = "rng";
