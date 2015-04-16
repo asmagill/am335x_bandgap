@@ -8,7 +8,7 @@ This is the am335x_bandgap temperature sensor as a dkms module tested under Linu
 
 ### Better Device Tree Modification
 
-`dtc` can be installed from pacman or AUR... I am using `dtc-git-patched` from AUR, but I don't really know what it's differences are with the one in the Community repo, other than I believe it to be a little newer.
+`dtc` can be installed from the Community repo via `pacman` or AUR... I am using `dtc-git-patched` from AUR, but I don't really know what the differences are, other than I believe the git one to be a little newer.
 
 ~~~bash
     $ cd /boot/dtbs
