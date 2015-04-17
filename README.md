@@ -20,10 +20,6 @@ This is the am335x_bandgap temperature sensor as a dkms module tested under Linu
     $ cp am335x-boneblack.dtb /boot/dtbs/am335x-boneblack.dtb
 ~~~
 
-The `bandgap.patch` is the only one you need for this module to work.  The other patch file also contains changes to enable the ADC pins AIN0-6 and /dev/ttyS1-4 (although 3.19.3 has a hard coded limit of 4 uarts (ttyS0 is already enabled)... supposedly this is patched in the next kernel... we'll see... I really only need 2 of them, and I really hate compiling custom kernels.) I include it here so I have a backup and these notes...
-
-***Note: second patch is actually insufficient for serial access... working on replacement.  Bandgap one works, though, so for the purposes of this repository, the above works.***
-
 ### Module installation
 
 Copy the contents of this repository into /usr/src/am335x_bandgap-20150411 and type
